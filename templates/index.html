@@ -1,0 +1,289 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Hero Section -->
+<section
+    class="max-w-[1720px] mx-auto px-4 md:px-12 lg:px-[100px] py-8 md:py-12 flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 lg:gap-[167px]">
+    <div class="flex-1">
+        <h1
+            class="font-inter text-4xl md:text-5xl lg:text-[64px] font-bold leading-tight md:leading-[76px] uppercase text-black">
+            Technology & Software Solutions
+        </h1>
+    </div>
+    <div class="lg:max-w-[693px]">
+        <p class="font-raleway text-base md:text-lg font-normal leading-[27px] text-[#212529]">
+            Empowering businesses with cutting-edge AI, automation, and custom software solutions to drive digital
+            transformation.
+        </p>
+    </div>
+</section>
+
+<!-- Hero Split Section -->
+<section class="w-full border-t-2 border-black">
+    <div class="max-w-[1720px] mx-auto px-4 md:px-12 lg:px-[100px] py-2 flex flex-col lg:flex-row">
+        <!-- Left - Video/Image -->
+        <div class="flex-1 border-b lg:border-b-0 lg:border-r border-black p-4 md:p-8 flex items-center justify-center">
+            <div
+                class="w-full h-[300px] md:h-[450px] lg:h-[596px] flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900 rounded">
+                <p class="font-roboto text-sm md:text-base font-normal leading-6 text-white">
+                    Your browser does not support the video tag.
+                </p>
+            </div>
+        </div>
+
+        <!-- Right - Red Card -->
+        <div
+            class="w-full lg:w-[717px] border-t lg:border-t-0 lg:border-l border-black p-4 md:p-8 flex items-center justify-center">
+            <div
+                class="bg-[#E12726] w-full min-h-[400px] md:min-h-[500px] lg:h-[596px] p-6 md:p-8 flex flex-col justify-between">
+                <div class="flex justify-end">
+                    <svg width="50" height="78" viewBox="0 0 50 78" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="w-[40px] h-[62px] md:w-[50px] md:h-[78px]">
+                        <path d="M25 0L50 39L25 78L0 39L25 0Z" fill="white" fill-opacity="0.2" />
+                    </svg>
+                </div>
+                <div>
+                    <p
+                        class="font-raleway text-base md:text-lg font-bold leading-[27px] tracking-[1px] text-white mb-2">
+                        Specialists in
+                    </p>
+                    <h2
+                        class="font-raleway text-3xl md:text-4xl lg:text-5xl font-bold leading-tight md:leading-[57px] text-white">
+                        Building innovative digital solutions that transform businesses
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Client Logos Scrolling Section -->
+<section class="w-full py-8 md:py-12 overflow-hidden bg-white">
+    <div class="relative">
+        <div class="flex gap-12 md:gap-24 lg:gap-48 animate-scroll">
+            {% load static %}
+            <!-- Repeat twice for seamless infinite scroll -->
+            {% for repeat in "01" %}
+            <div
+                class="w-[180px] h-[180px] md:w-[220px] md:h-[220px] lg:w-[250px] lg:h-[250px] flex items-center justify-center flex-shrink-0 p-8 bg-white rounded-lg shadow-sm">
+                <img src="{% static 'images/akbar.png' %}" alt="Akbar" class="max-w-full max-h-full object-contain">
+            </div>
+            <div
+                class="w-[180px] h-[180px] md:w-[220px] md:h-[220px] lg:w-[250px] lg:h-[250px] flex items-center justify-center flex-shrink-0 p-8 bg-white rounded-lg shadow-sm">
+                <img src="{% static 'images/amaarah.png' %}" alt="Amaarah" class="max-w-full max-h-full object-contain">
+            </div>
+            <div
+                class="w-[180px] h-[180px] md:w-[220px] md:h-[220px] lg:w-[250px] lg:h-[250px] flex items-center justify-center flex-shrink-0 p-8 bg-white rounded-lg shadow-sm">
+                <img src="{% static 'images/securetechav.png' %}" alt="SecureTechAV"
+                    class="max-w-full max-h-full object-contain">
+            </div>
+            <div
+                class="w-[180px] h-[180px] md:w-[220px] md:h-[220px] lg:w-[250px] lg:h-[250px] flex items-center justify-center flex-shrink-0 p-8 bg-white rounded-lg shadow-sm">
+                <img src="{% static 'images/techmiles.png' %}" alt="TechMiles"
+                    class="max-w-full max-h-full object-contain">
+            </div>
+            <div
+                class="w-[180px] h-[180px] md:w-[220px] md:h-[220px] lg:w-[250px] lg:h-[250px] flex items-center justify-center flex-shrink-0 p-8 bg-white rounded-lg shadow-sm">
+                <img src="{% static 'images/united.png' %}" alt="United" class="max-w-full max-h-full object-contain">
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Our Solutions Section -->
+<section class="max-w-[1720px] mx-auto px-4 md:px-12 lg:px-[100px] py-8 md:py-12">
+    <div class="flex justify-between items-center mb-8 md:mb-12">
+        <h2
+            class="font-inter text-3xl md:text-5xl lg:text-[64px] font-bold leading-tight md:leading-[76px] uppercase text-black">
+            Our Solutions
+        </h2>
+        <div class="w-[50px] h-[50px] flex items-center justify-center">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="25" cy="25" r="24" stroke="black" stroke-width="2" />
+                <path d="M15 25L35 25M35 25L27 17M35 25L27 33" stroke="black" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </div>
+    </div>
+
+    <div class="space-y-0">
+        {% for solution in solutions %}
+        <div
+            class="border-t border-black py-4 md:py-5 px-2 md:px-5 flex items-center gap-2 md:gap-3 hover:bg-gray-50 transition-colors cursor-pointer group">
+            <span
+                class="font-raleway text-sm md:text-lg font-bold leading-[21px] tracking-[1px] uppercase text-black flex-shrink-0">
+                {{ solution.number }}.
+            </span>
+            <h3
+                class="font-inter text-xl md:text-3xl lg:text-5xl font-light leading-tight md:leading-[54px] tracking-wide md:tracking-[3.36px] uppercase text-black group-hover:text-[#E12726] transition-colors">
+                {{ solution.title }}
+            </h3>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Our Work Section -->
+<section class="max-w-[1720px] mx-auto px-4 md:px-12 lg:px-[100px] py-8 md:py-12">
+    <div class="flex justify-between items-center pb-8 md:pb-12 border-b border-black mb-8 md:mb-12">
+        <h2
+            class="font-inter text-3xl md:text-5xl lg:text-[64px] font-bold leading-tight md:leading-[76px] uppercase text-black">
+            Our Work
+        </h2>
+        <div class="w-[50px] h-[50px] flex items-center justify-center">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="25" cy="25" r="24" stroke="black" stroke-width="2" />
+                <path d="M15 25L35 25M35 25L27 17M35 25L27 33" stroke="black" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-12">
+        {% for project in projects %}
+        <div class="rounded-[10px] overflow-hidden group cursor-pointer shadow-lg hover:shadow-xl transition-shadow">
+            <div class="relative h-[250px] md:h-[300px] bg-gray-100 overflow-hidden">
+                {% if project.image %}
+                <img src="{% static project.image %}" alt="{{ project.client }}"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                {% endif %}
+            </div>
+            <div class="bg-white px-4 py-3 border-t-2 border-[#E12726]">
+                <p class="font-inter text-sm font-medium leading-snug text-gray-700">
+                    {{ project.title }}
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="flex justify-center">
+        <a href="/projects/"
+            class="inline-flex items-center gap-2 px-4 py-3 rounded-full border border-black hover:bg-black hover:text-white transition-colors">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="2" />
+            </svg>
+            <span class="font-roboto text-base font-normal leading-6">Explore More</span>
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 20L25 20M25 20L20 15M25 20L20 25" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </a>
+    </div>
+</section>
+
+
+<!-- Our Companies Section - COMMENTED OUT -->
+<!--
+<section class="max-w-[1720px] mx-auto px-4 md:px-12 lg:px-[100px] py-8 md:py-12">
+    <div class="flex justify-between items-center mb-8 md:mb-12">
+        <h2
+            class="font-inter text-3xl md:text-5xl lg:text-[64px] font-bold leading-tight md:leading-[76px] uppercase text-black">
+            Our Companies
+        </h2>
+        <div class="w-[50px] h-[50px] flex items-center justify-center">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="25" cy="25" r="24" stroke="black" stroke-width="2" />
+                <path d="M15 25L35 25M35 25L27 17M35 25L27 33" stroke="black" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {% for company in companies %}
+        <div class="border border-black overflow-hidden">
+            <div class="h-[200px] md:h-[250px] lg:h-[300px] bg-gray-200 overflow-hidden">
+                {% if company.image %}
+                <img src="{{ company.image }}" alt="{{ company.title }}" class="w-full h-full object-cover">
+                {% endif %}
+            </div>
+            <div class="bg-white border-t border-black p-6 md:p-10">
+                <h3
+                    class="font-inter text-3xl md:text-4xl lg:text-5xl font-medium leading-tight md:leading-[57px] text-black mb-2">
+                    {{ company.title }}
+                </h3>
+                <p class="font-raleway text-base md:text-lg font-normal leading-[27px] text-[#222] mb-4">
+                    {{ company.description }}
+                </p>
+                <button
+                    class="inline-flex items-center gap-2 px-4 py-3 rounded-full border border-black hover:bg-black hover:text-white transition-colors">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                    <span class="font-roboto text-base font-normal leading-6">Learn More</span>
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 20L25 20M25 20L20 15M25 20L20 25" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+-->
+
+<!-- Work With Us Section -->
+<section class="max-w-[1720px] mx-auto px-4 md:px-12 lg:px-[100px] py-8 md:py-12">
+    <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 lg:gap-[167px]">
+        <div class="flex-1">
+            <h2
+                class="font-inter text-3xl md:text-5xl lg:text-[64px] font-bold leading-tight md:leading-[76px] uppercase text-black mb-2">
+                Work With Us
+            </h2>
+            <p class="font-raleway text-base md:text-lg font-normal leading-[27px] text-[#212529] max-w-[693px]">
+                Your trusted partner for custom software development, AI solutions, and digital transformation. Tailored
+                for startups, enterprises,
+                and everyone in between.
+            </p>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-4 w-full lg:w-auto">
+            <div class="border border-[#2F2F2F] p-6 md:p-10 w-full md:w-[402px]">
+                <h3
+                    class="font-inter text-4xl md:text-5xl lg:text-[64px] font-light leading-tight md:leading-[76px] capitalize text-black mb-4">
+                    One-off Project:
+                </h3>
+                <p class="font-raleway text-base md:text-lg font-normal leading-[27px] text-[#212529] mb-8">
+                    Custom software development, AI implementation, website/app creation, automation solutions & more
+                </p>
+                <button
+                    class="inline-flex items-center gap-2 px-4 py-3 rounded-full border border-black hover:bg-black hover:text-white transition-colors">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                    <span class="font-roboto text-base font-normal leading-6">Book a 30 mins call</span>
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 20L25 20M25 20L20 15M25 20L20 25" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="border border-[#2F2F2F] p-6 md:p-10 w-full md:w-[402px]">
+                <h3
+                    class="font-inter text-4xl md:text-5xl lg:text-[64px] font-light leading-tight md:leading-[76px] capitalize text-black mb-4">
+                    Retained Support:
+                </h3>
+                <p class="font-raleway text-base md:text-lg font-normal leading-[27px] text-[#212529] mb-8">
+                    Ongoing development support, system maintenance, social media management, tech consultations, and
+                    more
+                </p>
+                <button
+                    class="inline-flex items-center gap-2 px-4 py-3 rounded-full border border-black hover:bg-black hover:text-white transition-colors">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                    <span class="font-roboto text-base font-normal leading-6">Book a 30 mins call</span>
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 20L25 20M25 20L20 15M25 20L20 25" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
