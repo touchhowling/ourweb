@@ -17,3 +17,10 @@ handler404 = 'web.views.not_found_view'
 # Serve static files in development
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+# mainapp/urls.py
+from django.urls import path
+from .views import contact_view
+
+urlpatterns = [
+    path('contact/', contact_view, name='contact'),
+]
