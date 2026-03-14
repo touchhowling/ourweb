@@ -10,5 +10,5 @@ urlpatterns = [
     path('projects/', views.placeholder_view, name='projects'),
     path('newsroom/', views.placeholder_view, name='newsroom'),
     path('careers/', views.placeholder_view, name='careers'),
-    path('connect/', views.connect_view, name='connect'),
+    path('connect/', views.connect_view, name='connect'),  # Contact form page
 ]

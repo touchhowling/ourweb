@@ -1,6 +1,7 @@
 """
 Views for the Desarka web application.
 """
+from django.core.mail import send_mail
 from django.shortcuts import render
 
 
@@ -50,7 +51,7 @@ def index_view(request):
             {
                 'title': 'Enterprise networking and IT solutions',
                 'image': 'images/netmas_work.png',
-                'logo': 'images/netmas logo.png',
+                'logo': 'images/netmas_logo.png',
                 'client': 'Netmas'
             },
         ],
@@ -100,14 +101,47 @@ def about_view(request):
 
 
 def connect_view(request):
-    """Connect page with contact information."""
+    """Connect page with contact form and email notification."""
+
+    if request.method == "POST":
+        name = request.POST.get("name")
+        email = request.POST.get("email")
+        phone = request.POST.get("phone")
+        description = request.POST.get("description")
+
+        message = f"""
+New Contact Form Submission
+
+Name: {name}
+Email: {email}
+Phone: {phone}
+
+Message:
+{description}
+"""
+
+        send_mail(
+            "New Contact from Desarka Website",
+            message,
+            email,
+            ["desarka.co.in@gmail.com"],
+            fail_silently=False,
+        )
+
+        context = {
+            'page_title': 'Connect | Desarka',
+            'current_page': 'connect',
+            'success': True
+        }
+
+        return render(request, 'connect.html', context)
+
     context = {
         'page_title': 'Connect | Desarka',
         'current_page': 'connect',
     }
+
     return render(request, 'connect.html', context)
-
-
 def not_found_view(request, exception=None):
     """Custom 404 error page."""
     context = {
