@@ -30,6 +30,8 @@ ALLOWED_HOSTS = [
     'www.desarka.com',
     'ourweb-five.vercel.app',
     '.vercel.app',
+    '127.0.0.1',
+    'localhost',
 ]
 
 
@@ -129,7 +131,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 # Whitenoise configuration
 STORAGES = {
     "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+        "BACKEND": "whitenoise.storage.CompressedStaticFilesStorage",
     },
 }
 
