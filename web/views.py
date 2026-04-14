@@ -8,7 +8,7 @@ from django.shortcuts import render
 def index_view(request):
     """Homepage view with all main sections."""
     context = {
-        'page_title': 'Desarka | Leading Technology & Software Solutions Agency',
+        'page_title': 'Desarka | Leading Technology, Software & Hardware Solutions Agency',
         'current_page': 'home',
         'solutions': [
             {'number': '01', 'title': 'Website Development'},
@@ -16,6 +16,9 @@ def index_view(request):
             {'number': '03', 'title': 'AI & Automation Solutions'},
             {'number': '04', 'title': 'Social Media Management'},
             {'number': '05', 'title': 'Custom Software Services'},
+            {'number': '06', 'title': 'PCB Design & Development'},
+            {'number': '07', 'title': 'Bio Potential Signal Processing'},
+            {'number': '08', 'title': 'Embedded Systems & IoT'},
         ],
         'projects': [
             {
