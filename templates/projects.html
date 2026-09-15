@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="studio-container projects-page">
+    <div class="work-heading projects-heading">
+        <div>
+            <p class="eyebrow">SELECTED WORK</p>
+            <h1>Our work<span>.</span></h1>
+        </div>
+        <p class="projects-intro">
+            CRMs, storefronts, inventory systems, AI automation and booking platforms &mdash; built for
+            businesses across manufacturing, audio-visual integration, jewellery retail, hardware,
+            publishing and wellness.
+        </p>
+    </div>
+
+    <div class="work-grid">
+        {% for study in case_studies %}
+        <a class="work-card" href="{% url 'web:case_study' study.slug %}">
+            <div class="work-image">
+                <img class="work-image-bg" src="{% static study.cover|default:study.image %}" alt="{{ study.client }} project"
+                    width="1536" height="1024" {% if forloop.counter <= 2 %}fetchpriority="high"{% else %}loading="lazy"{% endif %} decoding="async">
+                <div class="work-image-focus" aria-hidden="true">
+                    <img src="{% static study.cover|default:study.image %}" alt="" width="1536" height="1024" loading="lazy" decoding="async">
+                    <span class="work-read-more">Read more <span aria-hidden="true">&rarr;</span></span>
+                </div>
+            </div>
+            <div class="work-meta">
+                <h3>{{ study.client }}</h3>
+                <p>{{ study.engagement }}</p>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="bg-black text-white">
+    <div class="max-w-7xl mx-auto px-4 md:px-12 lg:px-8 py-12 md:py-16">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <h2 class="font-inter text-2xl md:text-3xl font-medium">
+                Have a project in mind?
+            </h2>
+            <a href="{% url 'web:connect' %}"
+                class="font-inter font-semibold text-sm px-7 py-4 rounded-full bg-[#E12726] hover:bg-white hover:text-black transition-colors self-start md:self-auto">
+                Start a project
+            </a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
